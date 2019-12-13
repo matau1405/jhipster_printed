@@ -1,0 +1,36 @@
+{
+    "name": "Image",
+    "fields": [
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "longueurImg",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "largeurImg",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "poidsImg",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "positionImg",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191213132354",
+    "entityTableName": "image",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

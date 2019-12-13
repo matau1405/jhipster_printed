@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-image-heading">Create or edit a Image</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_url">Url</label>
+                    <input type="text" class="form-control" name="url" id="field_url"
+                           formControlName="url"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_longueurImg">Longueur Img</label>
+                    <input type="number" class="form-control" name="longueurImg" id="field_longueurImg"
+                           formControlName="longueurImg"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_largeurImg">Largeur Img</label>
+                    <input type="number" class="form-control" name="largeurImg" id="field_largeurImg"
+                           formControlName="largeurImg"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_poidsImg">Poids Img</label>
+                    <input type="number" class="form-control" name="poidsImg" id="field_poidsImg"
+                           formControlName="poidsImg"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_positionImg">Position Img</label>
+                    <input type="text" class="form-control" name="positionImg" id="field_positionImg"
+                           formControlName="positionImg"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

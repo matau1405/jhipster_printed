@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-commande-heading">Create or edit a Commande</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_idCmd">Id Cmd</label>
+                    <input type="text" class="form-control" name="idCmd" id="field_idCmd"
+                           formControlName="idCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dateCmd">Date Cmd</label>
+                    <input type="text" class="form-control" name="dateCmd" id="field_dateCmd"
+                           formControlName="dateCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_montantCmd">Montant Cmd</label>
+                    <input type="number" class="form-control" name="montantCmd" id="field_montantCmd"
+                           formControlName="montantCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_delaiLivraisonCmd">Delai Livraison Cmd</label>
+                    <input type="number" class="form-control" name="delaiLivraisonCmd" id="field_delaiLivraisonCmd"
+                           formControlName="delaiLivraisonCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_etatLivraisonCmd">Etat Livraison Cmd</label>
+                    <input type="text" class="form-control" name="etatLivraisonCmd" id="field_etatLivraisonCmd"
+                           formControlName="etatLivraisonCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_lieuLivraisonCmd">Lieu Livraison Cmd</label>
+                    <input type="text" class="form-control" name="lieuLivraisonCmd" id="field_lieuLivraisonCmd"
+                           formControlName="lieuLivraisonCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_modeLivraisonCmd">Mode Livraison Cmd</label>
+                    <input type="text" class="form-control" name="modeLivraisonCmd" id="field_modeLivraisonCmd"
+                           formControlName="modeLivraisonCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_prixTotalCmd">Prix Total Cmd</label>
+                    <input type="number" class="form-control" name="prixTotalCmd" id="field_prixTotalCmd"
+                           formControlName="prixTotalCmd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_modePaiement">Mode Paiement</label>
+                    <input type="text" class="form-control" name="modePaiement" id="field_modePaiement"
+                           formControlName="modePaiement"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_status">Status</label>
+                    <select class="form-control" name="status" formControlName="status" id="field_status">
+                        <option value="Completer">Completer</option>
+                        <option value="EnAttente">EnAttente</option>
+                        <option value="Annuler">Annuler</option>
+                    </select>
+                    <div *ngIf="editForm.get('status').invalid && (editForm.get('status').dirty || editForm.get('status').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('status').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

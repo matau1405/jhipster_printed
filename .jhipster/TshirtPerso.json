@@ -1,0 +1,15 @@
+{
+    "name": "TshirtPerso",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20191213132353",
+    "entityTableName": "tshirt_perso",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "Produits",
+    "fields": [
+        {
+            "fieldName": "idProd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomProd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descriptionProd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prixProd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dispo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "stock",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "marque",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "personnalisable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "umageProd",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191213132346",
+    "entityTableName": "produits",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

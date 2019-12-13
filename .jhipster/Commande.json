@@ -1,0 +1,60 @@
+{
+    "name": "Commande",
+    "fields": [
+        {
+            "fieldName": "idCmd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateCmd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "montantCmd",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "delaiLivraisonCmd",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "etatLivraisonCmd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lieuLivraisonCmd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modeLivraisonCmd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prixTotalCmd",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "modePaiement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "StatusCommande",
+            "fieldValues": "Completer,EnAttente,Annuler",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191213132350",
+    "entityTableName": "commande",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

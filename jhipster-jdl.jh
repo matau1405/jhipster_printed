@@ -1,0 +1,106 @@
+
+
+
+
+
+
+entity Produits {
+idProd String,
+nomProd String,
+descriptionProd String,
+prixProd String,
+dispo Boolean,
+stock Long,
+marque String,
+personnalisable Boolean,
+umageProd String
+}
+
+
+entity Facture{
+    id String required
+    date Instant required
+    details String
+    status StatusFacture required
+    paymentMethod ModePaiement required
+    paymentDate Instant required
+    paymentAmount BigDecimal required
+}
+
+enum StatusFacture {
+    Payer, Publier , Annuler
+}
+
+enum ModePaiement {
+    CarteCredit, CASH, PAYPAL
+}
+
+entity Expedition{
+    trackingCode String
+    date Instant required
+    details String
+}
+
+
+
+
+entity Panier {
+idPanier String,
+listeProduit String
+}
+
+entity Commande {
+idCmd String,
+dateCmd String,
+montantCmd Float, 
+delaiLivraisonCmd Double,
+etatLivraisonCmd String,
+lieuLivraisonCmd String,
+modeLivraisonCmd String,
+prixTotalCmd Float,
+modePaiement String
+status StatusCommande required
+}
+
+enum StatusCommande {
+    Completer, EnAttente, Annuler
+}
+
+entity Client {
+idClient String,
+nomClient String,
+prenomClient String,
+dateNaissanceClient String,
+adresseClient String required maxlength(100),
+villeClient String,
+paysClient String,
+emailClient String,
+listCommande String
+}
+
+entity ProduitsNoPerso {
+typeProduits String
+}
+
+entity TshirtPerso {
+
+}
+entity Image {
+url String,
+longueurImg Float,
+largeurImg Float,
+poidsImg Long,
+positionImg String
+}
+
+
+
+
+
+
+
+
+
+
+
+
