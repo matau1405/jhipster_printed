@@ -18,7 +18,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20191213132348",
+    "changelogDate": "20191219122007",
     "entityTableName": "expedition",
     "dto": "no",
     "pagination": "no",

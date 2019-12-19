@@ -30,16 +30,20 @@
             "fieldType": "String"
         },
         {
+            "fieldName": "imageProd",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "personnalisable",
             "fieldType": "Boolean"
         },
         {
-            "fieldName": "umageProd",
+            "fieldName": "imagePersonalisation",
             "fieldType": "String"
         }
     ],
     "relationships": [],
-    "changelogDate": "20191213132346",
+    "changelogDate": "20191219122005",
     "entityTableName": "produits",
     "dto": "no",
     "pagination": "no",

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { PrintedSharedModule } from 'app/shared/shared.module';
+import { JhipsterPrintedSharedModule } from 'app/shared/shared.module';
 import { ProduitsComponent } from './produits.component';
 import { ProduitsDetailComponent } from './produits-detail.component';
 import { ProduitsUpdateComponent } from './produits-update.component';
@@ -11,7 +11,7 @@ import { produitsRoute, produitsPopupRoute } from './produits.route';
 const ENTITY_STATES = [...produitsRoute, ...produitsPopupRoute];
 
 @NgModule({
-  imports: [PrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
+  imports: [JhipsterPrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
   declarations: [
     ProduitsComponent,
     ProduitsDetailComponent,
@@ -21,4 +21,4 @@ const ENTITY_STATES = [...produitsRoute, ...produitsPopupRoute];
   ],
   entryComponents: [ProduitsDeleteDialogComponent]
 })
-export class PrintedProduitsModule {}
+export class JhipsterPrintedProduitsModule {}

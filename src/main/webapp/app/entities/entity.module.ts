@@ -6,42 +6,30 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([
       {
         path: 'produits',
-        loadChildren: () => import('./produits/produits.module').then(m => m.PrintedProduitsModule)
+        loadChildren: () => import('./produits/produits.module').then(m => m.JhipsterPrintedProduitsModule)
       },
       {
         path: 'facture',
-        loadChildren: () => import('./facture/facture.module').then(m => m.PrintedFactureModule)
+        loadChildren: () => import('./facture/facture.module').then(m => m.JhipsterPrintedFactureModule)
       },
       {
         path: 'expedition',
-        loadChildren: () => import('./expedition/expedition.module').then(m => m.PrintedExpeditionModule)
+        loadChildren: () => import('./expedition/expedition.module').then(m => m.JhipsterPrintedExpeditionModule)
       },
       {
         path: 'panier',
-        loadChildren: () => import('./panier/panier.module').then(m => m.PrintedPanierModule)
+        loadChildren: () => import('./panier/panier.module').then(m => m.JhipsterPrintedPanierModule)
       },
       {
         path: 'commande',
-        loadChildren: () => import('./commande/commande.module').then(m => m.PrintedCommandeModule)
+        loadChildren: () => import('./commande/commande.module').then(m => m.JhipsterPrintedCommandeModule)
       },
       {
         path: 'client',
-        loadChildren: () => import('./client/client.module').then(m => m.PrintedClientModule)
-      },
-      {
-        path: 'produits-no-perso',
-        loadChildren: () => import('./produits-no-perso/produits-no-perso.module').then(m => m.PrintedProduitsNoPersoModule)
-      },
-      {
-        path: 'tshirt-perso',
-        loadChildren: () => import('./tshirt-perso/tshirt-perso.module').then(m => m.PrintedTshirtPersoModule)
-      },
-      {
-        path: 'image',
-        loadChildren: () => import('./image/image.module').then(m => m.PrintedImageModule)
+        loadChildren: () => import('./client/client.module').then(m => m.JhipsterPrintedClientModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
   ]
 })
-export class PrintedEntityModule {}
+export class JhipsterPrintedEntityModule {}

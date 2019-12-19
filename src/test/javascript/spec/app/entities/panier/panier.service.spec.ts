@@ -20,7 +20,7 @@ describe('Service Tests', () => {
       service = injector.get(PanierService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new Panier('ID', 'AAAAAAA', 'AAAAAAA');
+      elemDefault = new Panier('ID', 'AAAAAAA', 'AAAAAAA', 0, 0);
     });
 
     describe('Service methods', () => {
@@ -57,7 +57,9 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             idPanier: 'BBBBBB',
-            listeProduit: 'BBBBBB'
+            listeProduit: 'BBBBBB',
+            nombreProduits: 1,
+            prixTotal: 1
           },
           elemDefault
         );
@@ -76,7 +78,9 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             idPanier: 'BBBBBB',
-            listeProduit: 'BBBBBB'
+            listeProduit: 'BBBBBB',
+            nombreProduits: 1,
+            prixTotal: 1
           },
           elemDefault
         );

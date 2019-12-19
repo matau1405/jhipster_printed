@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.Expedition;
 import fr.inti.printed.repository.ExpeditionRepository;
 import fr.inti.printed.web.rest.errors.ExceptionTranslator;
@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link ExpeditionResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class ExpeditionResourceIT {
 
     private static final String DEFAULT_TRACKING_CODE = "AAAAAAAAAA";

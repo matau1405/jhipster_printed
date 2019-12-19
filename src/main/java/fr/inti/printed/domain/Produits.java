@@ -37,11 +37,14 @@ public class Produits implements Serializable {
     @Field("marque")
     private String marque;
 
+    @Field("image_prod")
+    private String imageProd;
+
     @Field("personnalisable")
     private Boolean personnalisable;
 
-    @Field("umage_prod")
-    private String umageProd;
+    @Field("image_personalisation")
+    private String imagePersonalisation;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -143,6 +146,19 @@ public class Produits implements Serializable {
         this.marque = marque;
     }
 
+    public String getImageProd() {
+        return imageProd;
+    }
+
+    public Produits imageProd(String imageProd) {
+        this.imageProd = imageProd;
+        return this;
+    }
+
+    public void setImageProd(String imageProd) {
+        this.imageProd = imageProd;
+    }
+
     public Boolean isPersonnalisable() {
         return personnalisable;
     }
@@ -156,17 +172,17 @@ public class Produits implements Serializable {
         this.personnalisable = personnalisable;
     }
 
-    public String getUmageProd() {
-        return umageProd;
+    public String getImagePersonalisation() {
+        return imagePersonalisation;
     }
 
-    public Produits umageProd(String umageProd) {
-        this.umageProd = umageProd;
+    public Produits imagePersonalisation(String imagePersonalisation) {
+        this.imagePersonalisation = imagePersonalisation;
         return this;
     }
 
-    public void setUmageProd(String umageProd) {
-        this.umageProd = umageProd;
+    public void setImagePersonalisation(String imagePersonalisation) {
+        this.imagePersonalisation = imagePersonalisation;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -197,8 +213,9 @@ public class Produits implements Serializable {
             ", dispo='" + isDispo() + "'" +
             ", stock=" + getStock() +
             ", marque='" + getMarque() + "'" +
+            ", imageProd='" + getImageProd() + "'" +
             ", personnalisable='" + isPersonnalisable() + "'" +
-            ", umageProd='" + getUmageProd() + "'" +
+            ", imagePersonalisation='" + getImagePersonalisation() + "'" +
             "}";
     }
 }

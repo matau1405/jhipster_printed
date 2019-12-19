@@ -18,7 +18,9 @@ export class PanierUpdateComponent implements OnInit {
   editForm = this.fb.group({
     id: [],
     idPanier: [],
-    listeProduit: []
+    listeProduit: [],
+    nombreProduits: [],
+    prixTotal: []
   });
 
   constructor(protected panierService: PanierService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -34,7 +36,9 @@ export class PanierUpdateComponent implements OnInit {
     this.editForm.patchValue({
       id: panier.id,
       idPanier: panier.idPanier,
-      listeProduit: panier.listeProduit
+      listeProduit: panier.listeProduit,
+      nombreProduits: panier.nombreProduits,
+      prixTotal: panier.prixTotal
     });
   }
 
@@ -57,7 +61,9 @@ export class PanierUpdateComponent implements OnInit {
       ...new Panier(),
       id: this.editForm.get(['id']).value,
       idPanier: this.editForm.get(['idPanier']).value,
-      listeProduit: this.editForm.get(['listeProduit']).value
+      listeProduit: this.editForm.get(['listeProduit']).value,
+      nombreProduits: this.editForm.get(['nombreProduits']).value,
+      prixTotal: this.editForm.get(['prixTotal']).value
     };
   }
 

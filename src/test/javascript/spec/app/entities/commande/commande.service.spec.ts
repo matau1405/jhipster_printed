@@ -21,7 +21,7 @@ describe('Service Tests', () => {
       service = injector.get(CommandeService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new Commande('ID', 'AAAAAAA', 'AAAAAAA', 0, 0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0, 'AAAAAAA', StatusCommande.Completer);
+      elemDefault = new Commande('ID', 'AAAAAAA', 'AAAAAAA', 0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0, 'AAAAAAA', StatusCommande.Completer);
     });
 
     describe('Service methods', () => {
@@ -59,7 +59,6 @@ describe('Service Tests', () => {
           {
             idCmd: 'BBBBBB',
             dateCmd: 'BBBBBB',
-            montantCmd: 1,
             delaiLivraisonCmd: 1,
             etatLivraisonCmd: 'BBBBBB',
             lieuLivraisonCmd: 'BBBBBB',
@@ -86,7 +85,6 @@ describe('Service Tests', () => {
           {
             idCmd: 'BBBBBB',
             dateCmd: 'BBBBBB',
-            montantCmd: 1,
             delaiLivraisonCmd: 1,
             etatLivraisonCmd: 'BBBBBB',
             lieuLivraisonCmd: 'BBBBBB',

@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.inti.printed</groupId>
-    <artifactId>printed</artifactId>
+    <artifactId>jhipster-printed</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Printed</name>
+    <name>Jhipster Printed</name>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
@@ -475,7 +475,7 @@
                             <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
-                            <image>printed:latest</image>
+                            <image>jhipster_printed:latest</image>
                         </to>
                         <container>
                             <entrypoint>

@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.Client;
 import fr.inti.printed.repository.ClientRepository;
 import fr.inti.printed.web.rest.errors.ExceptionTranslator;
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link ClientResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class ClientResourceIT {
 
     private static final String DEFAULT_ID_CLIENT = "AAAAAAAAAA";

@@ -1,6 +1,6 @@
 package fr.inti.printed.service;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.config.Constants;
 import fr.inti.printed.domain.PersistentToken;
 import fr.inti.printed.domain.User;
@@ -28,7 +28,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class UserServiceIT {
 
     private static final String DEFAULT_LOGIN = "johndoe";

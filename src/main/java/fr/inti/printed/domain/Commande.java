@@ -25,9 +25,6 @@ public class Commande implements Serializable {
     @Field("date_cmd")
     private String dateCmd;
 
-    @Field("montant_cmd")
-    private Float montantCmd;
-
     @Field("delai_livraison_cmd")
     private Double delaiLivraisonCmd;
 
@@ -83,19 +80,6 @@ public class Commande implements Serializable {
 
     public void setDateCmd(String dateCmd) {
         this.dateCmd = dateCmd;
-    }
-
-    public Float getMontantCmd() {
-        return montantCmd;
-    }
-
-    public Commande montantCmd(Float montantCmd) {
-        this.montantCmd = montantCmd;
-        return this;
-    }
-
-    public void setMontantCmd(Float montantCmd) {
-        this.montantCmd = montantCmd;
     }
 
     public Double getDelaiLivraisonCmd() {
@@ -212,7 +196,6 @@ public class Commande implements Serializable {
             "id=" + getId() +
             ", idCmd='" + getIdCmd() + "'" +
             ", dateCmd='" + getDateCmd() + "'" +
-            ", montantCmd=" + getMontantCmd() +
             ", delaiLivraisonCmd=" + getDelaiLivraisonCmd() +
             ", etatLivraisonCmd='" + getEtatLivraisonCmd() + "'" +
             ", lieuLivraisonCmd='" + getLieuLivraisonCmd() + "'" +

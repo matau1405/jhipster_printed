@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.Commande;
 import fr.inti.printed.repository.CommandeRepository;
 import fr.inti.printed.web.rest.errors.ExceptionTranslator;
@@ -30,7 +30,7 @@ import fr.inti.printed.domain.enumeration.StatusCommande;
 /**
  * Integration tests for the {@link CommandeResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class CommandeResourceIT {
 
     private static final String DEFAULT_ID_CMD = "AAAAAAAAAA";
@@ -38,9 +38,6 @@ public class CommandeResourceIT {
 
     private static final String DEFAULT_DATE_CMD = "AAAAAAAAAA";
     private static final String UPDATED_DATE_CMD = "BBBBBBBBBB";
-
-    private static final Float DEFAULT_MONTANT_CMD = 1F;
-    private static final Float UPDATED_MONTANT_CMD = 2F;
 
     private static final Double DEFAULT_DELAI_LIVRAISON_CMD = 1D;
     private static final Double UPDATED_DELAI_LIVRAISON_CMD = 2D;
@@ -104,7 +101,6 @@ public class CommandeResourceIT {
         Commande commande = new Commande()
             .idCmd(DEFAULT_ID_CMD)
             .dateCmd(DEFAULT_DATE_CMD)
-            .montantCmd(DEFAULT_MONTANT_CMD)
             .delaiLivraisonCmd(DEFAULT_DELAI_LIVRAISON_CMD)
             .etatLivraisonCmd(DEFAULT_ETAT_LIVRAISON_CMD)
             .lieuLivraisonCmd(DEFAULT_LIEU_LIVRAISON_CMD)
@@ -124,7 +120,6 @@ public class CommandeResourceIT {
         Commande commande = new Commande()
             .idCmd(UPDATED_ID_CMD)
             .dateCmd(UPDATED_DATE_CMD)
-            .montantCmd(UPDATED_MONTANT_CMD)
             .delaiLivraisonCmd(UPDATED_DELAI_LIVRAISON_CMD)
             .etatLivraisonCmd(UPDATED_ETAT_LIVRAISON_CMD)
             .lieuLivraisonCmd(UPDATED_LIEU_LIVRAISON_CMD)
@@ -157,7 +152,6 @@ public class CommandeResourceIT {
         Commande testCommande = commandeList.get(commandeList.size() - 1);
         assertThat(testCommande.getIdCmd()).isEqualTo(DEFAULT_ID_CMD);
         assertThat(testCommande.getDateCmd()).isEqualTo(DEFAULT_DATE_CMD);
-        assertThat(testCommande.getMontantCmd()).isEqualTo(DEFAULT_MONTANT_CMD);
         assertThat(testCommande.getDelaiLivraisonCmd()).isEqualTo(DEFAULT_DELAI_LIVRAISON_CMD);
         assertThat(testCommande.getEtatLivraisonCmd()).isEqualTo(DEFAULT_ETAT_LIVRAISON_CMD);
         assertThat(testCommande.getLieuLivraisonCmd()).isEqualTo(DEFAULT_LIEU_LIVRAISON_CMD);
@@ -215,7 +209,6 @@ public class CommandeResourceIT {
             .andExpect(jsonPath("$.[*].id").value(hasItem(commande.getId())))
             .andExpect(jsonPath("$.[*].idCmd").value(hasItem(DEFAULT_ID_CMD)))
             .andExpect(jsonPath("$.[*].dateCmd").value(hasItem(DEFAULT_DATE_CMD)))
-            .andExpect(jsonPath("$.[*].montantCmd").value(hasItem(DEFAULT_MONTANT_CMD.doubleValue())))
             .andExpect(jsonPath("$.[*].delaiLivraisonCmd").value(hasItem(DEFAULT_DELAI_LIVRAISON_CMD.doubleValue())))
             .andExpect(jsonPath("$.[*].etatLivraisonCmd").value(hasItem(DEFAULT_ETAT_LIVRAISON_CMD)))
             .andExpect(jsonPath("$.[*].lieuLivraisonCmd").value(hasItem(DEFAULT_LIEU_LIVRAISON_CMD)))
@@ -237,7 +230,6 @@ public class CommandeResourceIT {
             .andExpect(jsonPath("$.id").value(commande.getId()))
             .andExpect(jsonPath("$.idCmd").value(DEFAULT_ID_CMD))
             .andExpect(jsonPath("$.dateCmd").value(DEFAULT_DATE_CMD))
-            .andExpect(jsonPath("$.montantCmd").value(DEFAULT_MONTANT_CMD.doubleValue()))
             .andExpect(jsonPath("$.delaiLivraisonCmd").value(DEFAULT_DELAI_LIVRAISON_CMD.doubleValue()))
             .andExpect(jsonPath("$.etatLivraisonCmd").value(DEFAULT_ETAT_LIVRAISON_CMD))
             .andExpect(jsonPath("$.lieuLivraisonCmd").value(DEFAULT_LIEU_LIVRAISON_CMD))
@@ -266,7 +258,6 @@ public class CommandeResourceIT {
         updatedCommande
             .idCmd(UPDATED_ID_CMD)
             .dateCmd(UPDATED_DATE_CMD)
-            .montantCmd(UPDATED_MONTANT_CMD)
             .delaiLivraisonCmd(UPDATED_DELAI_LIVRAISON_CMD)
             .etatLivraisonCmd(UPDATED_ETAT_LIVRAISON_CMD)
             .lieuLivraisonCmd(UPDATED_LIEU_LIVRAISON_CMD)
@@ -286,7 +277,6 @@ public class CommandeResourceIT {
         Commande testCommande = commandeList.get(commandeList.size() - 1);
         assertThat(testCommande.getIdCmd()).isEqualTo(UPDATED_ID_CMD);
         assertThat(testCommande.getDateCmd()).isEqualTo(UPDATED_DATE_CMD);
-        assertThat(testCommande.getMontantCmd()).isEqualTo(UPDATED_MONTANT_CMD);
         assertThat(testCommande.getDelaiLivraisonCmd()).isEqualTo(UPDATED_DELAI_LIVRAISON_CMD);
         assertThat(testCommande.getEtatLivraisonCmd()).isEqualTo(UPDATED_ETAT_LIVRAISON_CMD);
         assertThat(testCommande.getLieuLivraisonCmd()).isEqualTo(UPDATED_LIEU_LIVRAISON_CMD);

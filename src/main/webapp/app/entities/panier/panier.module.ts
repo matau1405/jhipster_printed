@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { PrintedSharedModule } from 'app/shared/shared.module';
+import { JhipsterPrintedSharedModule } from 'app/shared/shared.module';
 import { PanierComponent } from './panier.component';
 import { PanierDetailComponent } from './panier-detail.component';
 import { PanierUpdateComponent } from './panier-update.component';
@@ -11,8 +11,8 @@ import { panierRoute, panierPopupRoute } from './panier.route';
 const ENTITY_STATES = [...panierRoute, ...panierPopupRoute];
 
 @NgModule({
-  imports: [PrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
+  imports: [JhipsterPrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
   declarations: [PanierComponent, PanierDetailComponent, PanierUpdateComponent, PanierDeleteDialogComponent, PanierDeletePopupComponent],
   entryComponents: [PanierDeleteDialogComponent]
 })
-export class PrintedPanierModule {}
+export class JhipsterPrintedPanierModule {}

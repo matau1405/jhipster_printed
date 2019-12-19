@@ -1,6 +1,6 @@
 package fr.inti.printed.repository;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.config.Constants;
 import fr.inti.printed.config.audit.AuditEventConverter;
 import fr.inti.printed.domain.PersistentAuditEvent;
@@ -26,7 +26,7 @@ import static fr.inti.printed.repository.CustomAuditEventRepository.EVENT_DATA_C
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class CustomAuditEventRepositoryIT {
 
     @Autowired

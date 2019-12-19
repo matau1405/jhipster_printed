@@ -7,8 +7,9 @@ export interface IProduits {
   dispo?: boolean;
   stock?: number;
   marque?: string;
+  imageProd?: string;
   personnalisable?: boolean;
-  umageProd?: string;
+  imagePersonalisation?: string;
 }
 
 export class Produits implements IProduits {
@@ -21,8 +22,9 @@ export class Produits implements IProduits {
     public dispo?: boolean,
     public stock?: number,
     public marque?: string,
+    public imageProd?: string,
     public personnalisable?: boolean,
-    public umageProd?: string
+    public imagePersonalisation?: string
   ) {
     this.dispo = this.dispo || false;
     this.personnalisable = this.personnalisable || false;

@@ -24,8 +24,9 @@ export class ProduitsUpdateComponent implements OnInit {
     dispo: [],
     stock: [],
     marque: [],
+    imageProd: [],
     personnalisable: [],
-    umageProd: []
+    imagePersonalisation: []
   });
 
   constructor(protected produitsService: ProduitsService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -47,8 +48,9 @@ export class ProduitsUpdateComponent implements OnInit {
       dispo: produits.dispo,
       stock: produits.stock,
       marque: produits.marque,
+      imageProd: produits.imageProd,
       personnalisable: produits.personnalisable,
-      umageProd: produits.umageProd
+      imagePersonalisation: produits.imagePersonalisation
     });
   }
 
@@ -77,8 +79,9 @@ export class ProduitsUpdateComponent implements OnInit {
       dispo: this.editForm.get(['dispo']).value,
       stock: this.editForm.get(['stock']).value,
       marque: this.editForm.get(['marque']).value,
+      imageProd: this.editForm.get(['imageProd']).value,
       personnalisable: this.editForm.get(['personnalisable']).value,
-      umageProd: this.editForm.get(['umageProd']).value
+      imagePersonalisation: this.editForm.get(['imagePersonalisation']).value
     };
   }
 

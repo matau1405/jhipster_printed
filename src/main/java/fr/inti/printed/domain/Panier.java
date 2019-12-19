@@ -22,6 +22,12 @@ public class Panier implements Serializable {
     @Field("liste_produit")
     private String listeProduit;
 
+    @Field("nombre_produits")
+    private Integer nombreProduits;
+
+    @Field("prix_total")
+    private Double prixTotal;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
@@ -56,6 +62,32 @@ public class Panier implements Serializable {
     public void setListeProduit(String listeProduit) {
         this.listeProduit = listeProduit;
     }
+
+    public Integer getNombreProduits() {
+        return nombreProduits;
+    }
+
+    public Panier nombreProduits(Integer nombreProduits) {
+        this.nombreProduits = nombreProduits;
+        return this;
+    }
+
+    public void setNombreProduits(Integer nombreProduits) {
+        this.nombreProduits = nombreProduits;
+    }
+
+    public Double getPrixTotal() {
+        return prixTotal;
+    }
+
+    public Panier prixTotal(Double prixTotal) {
+        this.prixTotal = prixTotal;
+        return this;
+    }
+
+    public void setPrixTotal(Double prixTotal) {
+        this.prixTotal = prixTotal;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -80,6 +112,8 @@ public class Panier implements Serializable {
             "id=" + getId() +
             ", idPanier='" + getIdPanier() + "'" +
             ", listeProduit='" + getListeProduit() + "'" +
+            ", nombreProduits=" + getNombreProduits() +
+            ", prixTotal=" + getPrixTotal() +
             "}";
     }
 }

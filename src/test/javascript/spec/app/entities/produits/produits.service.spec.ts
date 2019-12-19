@@ -20,7 +20,7 @@ describe('Service Tests', () => {
       service = injector.get(ProduitsService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new Produits('ID', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', false, 0, 'AAAAAAA', false, 'AAAAAAA');
+      elemDefault = new Produits('ID', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', false, 0, 'AAAAAAA', 'AAAAAAA', false, 'AAAAAAA');
     });
 
     describe('Service methods', () => {
@@ -63,8 +63,9 @@ describe('Service Tests', () => {
             dispo: true,
             stock: 1,
             marque: 'BBBBBB',
+            imageProd: 'BBBBBB',
             personnalisable: true,
-            umageProd: 'BBBBBB'
+            imagePersonalisation: 'BBBBBB'
           },
           elemDefault
         );
@@ -89,8 +90,9 @@ describe('Service Tests', () => {
             dispo: true,
             stock: 1,
             marque: 'BBBBBB',
+            imageProd: 'BBBBBB',
             personnalisable: true,
-            umageProd: 'BBBBBB'
+            imagePersonalisation: 'BBBBBB'
           },
           elemDefault
         );

@@ -1,7 +1,7 @@
 {
-  "name": "printed",
+  "name": "jhipster-printed",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for Printed",
+  "description": "Description for jhipster_printed",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
