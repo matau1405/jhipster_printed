@@ -14,6 +14,9 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ErrorComponent } from './layouts/error/error.component';
 
+import { ProjetComponent } from './projet/projet.component';
+import { EquipeComponent } from './equipe/equipe.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { ErrorComponent } from './layouts/error/error.component';
     PrintedEntityModule,
     PrintedAppRoutingModule
   ],
-  declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+  declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, ProjetComponent, EquipeComponent],
   bootstrap: [JhiMainComponent]
 })
 export class PrintedAppModule {}
