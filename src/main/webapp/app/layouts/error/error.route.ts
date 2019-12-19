@@ -8,7 +8,7 @@ export const errorRoute: Routes = [
     component: ErrorComponent,
     data: {
       authorities: [],
-      pageTitle: 'Printed'
+      pageTitle: 'jhipster_printed'
     }
   },
   {
@@ -16,7 +16,7 @@ export const errorRoute: Routes = [
     component: ErrorComponent,
     data: {
       authorities: [],
-      pageTitle: 'Printed',
+      pageTitle: 'jhipster_printed',
       error403: true
     }
   },
@@ -25,7 +25,7 @@ export const errorRoute: Routes = [
     component: ErrorComponent,
     data: {
       authorities: [],
-      pageTitle: 'Printed',
+      pageTitle: 'jhipster_printed',
       error404: true
     }
   },

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
-import { PrintedTestModule } from '../../../test.module';
+import { JhipsterPrintedTestModule } from '../../../test.module';
 import { ClientDetailComponent } from 'app/entities/client/client-detail.component';
 import { Client } from 'app/shared/model/client.model';
 
@@ -14,7 +14,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [PrintedTestModule],
+        imports: [JhipsterPrintedTestModule],
         declarations: [ClientDetailComponent],
         providers: [{ provide: ActivatedRoute, useValue: route }]
       })

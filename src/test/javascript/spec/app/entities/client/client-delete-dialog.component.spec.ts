@@ -3,7 +3,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { of } from 'rxjs';
 import { JhiEventManager } from 'ng-jhipster';
 
-import { PrintedTestModule } from '../../../test.module';
+import { JhipsterPrintedTestModule } from '../../../test.module';
 import { ClientDeleteDialogComponent } from 'app/entities/client/client-delete-dialog.component';
 import { ClientService } from 'app/entities/client/client.service';
 
@@ -17,7 +17,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [PrintedTestModule],
+        imports: [JhipsterPrintedTestModule],
         declarations: [ClientDeleteDialogComponent]
       })
         .overrideTemplate(ClientDeleteDialogComponent, '')

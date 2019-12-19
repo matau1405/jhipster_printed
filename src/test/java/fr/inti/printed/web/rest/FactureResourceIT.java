@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.Facture;
 import fr.inti.printed.repository.FactureRepository;
 import fr.inti.printed.web.rest.errors.ExceptionTranslator;
@@ -34,7 +34,7 @@ import fr.inti.printed.domain.enumeration.ModePaiement;
 /**
  * Integration tests for the {@link FactureResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class FactureResourceIT {
 
     private static final Instant DEFAULT_DATE = Instant.ofEpochMilli(0L);

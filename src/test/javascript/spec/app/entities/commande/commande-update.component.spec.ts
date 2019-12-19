@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { PrintedTestModule } from '../../../test.module';
+import { JhipsterPrintedTestModule } from '../../../test.module';
 import { CommandeUpdateComponent } from 'app/entities/commande/commande-update.component';
 import { CommandeService } from 'app/entities/commande/commande.service';
 import { Commande } from 'app/shared/model/commande.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [PrintedTestModule],
+        imports: [JhipsterPrintedTestModule],
         declarations: [CommandeUpdateComponent],
         providers: [FormBuilder]
       })

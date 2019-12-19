@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { PrintedTestModule } from '../../../test.module';
+import { JhipsterPrintedTestModule } from '../../../test.module';
 import { FactureComponent } from 'app/entities/facture/facture.component';
 import { FactureService } from 'app/entities/facture/facture.service';
 import { Facture } from 'app/shared/model/facture.model';
@@ -15,7 +15,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [PrintedTestModule],
+        imports: [JhipsterPrintedTestModule],
         declarations: [FactureComponent],
         providers: []
       })

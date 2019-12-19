@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link ClientForwardController} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class ClientForwardControllerIT {
 
     private MockMvc restMockMvc;

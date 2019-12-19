@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { PrintedSharedModule } from 'app/shared/shared.module';
+import { JhipsterPrintedSharedModule } from 'app/shared/shared.module';
 import { FactureComponent } from './facture.component';
 import { FactureDetailComponent } from './facture-detail.component';
 import { FactureUpdateComponent } from './facture-update.component';
@@ -11,7 +11,7 @@ import { factureRoute, facturePopupRoute } from './facture.route';
 const ENTITY_STATES = [...factureRoute, ...facturePopupRoute];
 
 @NgModule({
-  imports: [PrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
+  imports: [JhipsterPrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
   declarations: [
     FactureComponent,
     FactureDetailComponent,
@@ -21,4 +21,4 @@ const ENTITY_STATES = [...factureRoute, ...facturePopupRoute];
   ],
   entryComponents: [FactureDeleteDialogComponent]
 })
-export class PrintedFactureModule {}
+export class JhipsterPrintedFactureModule {}

@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.Produits;
 import fr.inti.printed.repository.ProduitsRepository;
 import fr.inti.printed.web.rest.errors.ExceptionTranslator;
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link ProduitsResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class ProduitsResourceIT {
 
     private static final String DEFAULT_ID_PROD = "AAAAAAAAAA";
@@ -53,11 +53,14 @@ public class ProduitsResourceIT {
     private static final String DEFAULT_MARQUE = "AAAAAAAAAA";
     private static final String UPDATED_MARQUE = "BBBBBBBBBB";
 
+    private static final String DEFAULT_IMAGE_PROD = "AAAAAAAAAA";
+    private static final String UPDATED_IMAGE_PROD = "BBBBBBBBBB";
+
     private static final Boolean DEFAULT_PERSONNALISABLE = false;
     private static final Boolean UPDATED_PERSONNALISABLE = true;
 
-    private static final String DEFAULT_UMAGE_PROD = "AAAAAAAAAA";
-    private static final String UPDATED_UMAGE_PROD = "BBBBBBBBBB";
+    private static final String DEFAULT_IMAGE_PERSONALISATION = "AAAAAAAAAA";
+    private static final String UPDATED_IMAGE_PERSONALISATION = "BBBBBBBBBB";
 
     @Autowired
     private ProduitsRepository produitsRepository;
@@ -105,8 +108,9 @@ public class ProduitsResourceIT {
             .dispo(DEFAULT_DISPO)
             .stock(DEFAULT_STOCK)
             .marque(DEFAULT_MARQUE)
+            .imageProd(DEFAULT_IMAGE_PROD)
             .personnalisable(DEFAULT_PERSONNALISABLE)
-            .umageProd(DEFAULT_UMAGE_PROD);
+            .imagePersonalisation(DEFAULT_IMAGE_PERSONALISATION);
         return produits;
     }
     /**
@@ -124,8 +128,9 @@ public class ProduitsResourceIT {
             .dispo(UPDATED_DISPO)
             .stock(UPDATED_STOCK)
             .marque(UPDATED_MARQUE)
+            .imageProd(UPDATED_IMAGE_PROD)
             .personnalisable(UPDATED_PERSONNALISABLE)
-            .umageProd(UPDATED_UMAGE_PROD);
+            .imagePersonalisation(UPDATED_IMAGE_PERSONALISATION);
         return produits;
     }
 
@@ -156,8 +161,9 @@ public class ProduitsResourceIT {
         assertThat(testProduits.isDispo()).isEqualTo(DEFAULT_DISPO);
         assertThat(testProduits.getStock()).isEqualTo(DEFAULT_STOCK);
         assertThat(testProduits.getMarque()).isEqualTo(DEFAULT_MARQUE);
+        assertThat(testProduits.getImageProd()).isEqualTo(DEFAULT_IMAGE_PROD);
         assertThat(testProduits.isPersonnalisable()).isEqualTo(DEFAULT_PERSONNALISABLE);
-        assertThat(testProduits.getUmageProd()).isEqualTo(DEFAULT_UMAGE_PROD);
+        assertThat(testProduits.getImagePersonalisation()).isEqualTo(DEFAULT_IMAGE_PERSONALISATION);
     }
 
     @Test
@@ -196,8 +202,9 @@ public class ProduitsResourceIT {
             .andExpect(jsonPath("$.[*].dispo").value(hasItem(DEFAULT_DISPO.booleanValue())))
             .andExpect(jsonPath("$.[*].stock").value(hasItem(DEFAULT_STOCK.intValue())))
             .andExpect(jsonPath("$.[*].marque").value(hasItem(DEFAULT_MARQUE)))
+            .andExpect(jsonPath("$.[*].imageProd").value(hasItem(DEFAULT_IMAGE_PROD)))
             .andExpect(jsonPath("$.[*].personnalisable").value(hasItem(DEFAULT_PERSONNALISABLE.booleanValue())))
-            .andExpect(jsonPath("$.[*].umageProd").value(hasItem(DEFAULT_UMAGE_PROD)));
+            .andExpect(jsonPath("$.[*].imagePersonalisation").value(hasItem(DEFAULT_IMAGE_PERSONALISATION)));
     }
     
     @Test
@@ -217,8 +224,9 @@ public class ProduitsResourceIT {
             .andExpect(jsonPath("$.dispo").value(DEFAULT_DISPO.booleanValue()))
             .andExpect(jsonPath("$.stock").value(DEFAULT_STOCK.intValue()))
             .andExpect(jsonPath("$.marque").value(DEFAULT_MARQUE))
+            .andExpect(jsonPath("$.imageProd").value(DEFAULT_IMAGE_PROD))
             .andExpect(jsonPath("$.personnalisable").value(DEFAULT_PERSONNALISABLE.booleanValue()))
-            .andExpect(jsonPath("$.umageProd").value(DEFAULT_UMAGE_PROD));
+            .andExpect(jsonPath("$.imagePersonalisation").value(DEFAULT_IMAGE_PERSONALISATION));
     }
 
     @Test
@@ -245,8 +253,9 @@ public class ProduitsResourceIT {
             .dispo(UPDATED_DISPO)
             .stock(UPDATED_STOCK)
             .marque(UPDATED_MARQUE)
+            .imageProd(UPDATED_IMAGE_PROD)
             .personnalisable(UPDATED_PERSONNALISABLE)
-            .umageProd(UPDATED_UMAGE_PROD);
+            .imagePersonalisation(UPDATED_IMAGE_PERSONALISATION);
 
         restProduitsMockMvc.perform(put("/api/produits")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -264,8 +273,9 @@ public class ProduitsResourceIT {
         assertThat(testProduits.isDispo()).isEqualTo(UPDATED_DISPO);
         assertThat(testProduits.getStock()).isEqualTo(UPDATED_STOCK);
         assertThat(testProduits.getMarque()).isEqualTo(UPDATED_MARQUE);
+        assertThat(testProduits.getImageProd()).isEqualTo(UPDATED_IMAGE_PROD);
         assertThat(testProduits.isPersonnalisable()).isEqualTo(UPDATED_PERSONNALISABLE);
-        assertThat(testProduits.getUmageProd()).isEqualTo(UPDATED_UMAGE_PROD);
+        assertThat(testProduits.getImagePersonalisation()).isEqualTo(UPDATED_IMAGE_PERSONALISATION);
     }
 
     @Test

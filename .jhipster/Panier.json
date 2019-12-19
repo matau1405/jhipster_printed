@@ -8,10 +8,18 @@
         {
             "fieldName": "listeProduit",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreProduits",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "prixTotal",
+            "fieldType": "Double"
         }
     ],
     "relationships": [],
-    "changelogDate": "20191213132349",
+    "changelogDate": "20191219122008",
     "entityTableName": "panier",
     "dto": "no",
     "pagination": "no",

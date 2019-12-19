@@ -21,18 +21,18 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableConfigurationProperties({ApplicationProperties.class})
-public class PrintedApp implements InitializingBean {
+public class JhipsterPrintedApp implements InitializingBean {
 
-    private static final Logger log = LoggerFactory.getLogger(PrintedApp.class);
+    private static final Logger log = LoggerFactory.getLogger(JhipsterPrintedApp.class);
 
     private final Environment env;
 
-    public PrintedApp(Environment env) {
+    public JhipsterPrintedApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes Printed.
+     * Initializes jhipster_printed.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -57,7 +57,7 @@ public class PrintedApp implements InitializingBean {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(PrintedApp.class);
+        SpringApplication app = new SpringApplication(JhipsterPrintedApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

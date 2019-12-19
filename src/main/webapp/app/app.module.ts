@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import './vendor';
-import { PrintedSharedModule } from 'app/shared/shared.module';
-import { PrintedCoreModule } from 'app/core/core.module';
-import { PrintedAppRoutingModule } from './app-routing.module';
-import { PrintedHomeModule } from './home/home.module';
-import { PrintedEntityModule } from './entities/entity.module';
+import { JhipsterPrintedSharedModule } from 'app/shared/shared.module';
+import { JhipsterPrintedCoreModule } from 'app/core/core.module';
+import { JhipsterPrintedAppRoutingModule } from './app-routing.module';
+import { JhipsterPrintedHomeModule } from './home/home.module';
+import { JhipsterPrintedEntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -17,14 +17,14 @@ import { ErrorComponent } from './layouts/error/error.component';
 @NgModule({
   imports: [
     BrowserModule,
-    PrintedSharedModule,
-    PrintedCoreModule,
-    PrintedHomeModule,
+    JhipsterPrintedSharedModule,
+    JhipsterPrintedCoreModule,
+    JhipsterPrintedHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
-    PrintedEntityModule,
-    PrintedAppRoutingModule
+    JhipsterPrintedEntityModule,
+    JhipsterPrintedAppRoutingModule
   ],
   declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
   bootstrap: [JhiMainComponent]
 })
-export class PrintedAppModule {}
+export class JhipsterPrintedAppModule {}

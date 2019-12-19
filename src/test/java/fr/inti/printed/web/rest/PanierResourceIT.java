@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.Panier;
 import fr.inti.printed.repository.PanierRepository;
 import fr.inti.printed.web.rest.errors.ExceptionTranslator;
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link PanierResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class PanierResourceIT {
 
     private static final String DEFAULT_ID_PANIER = "AAAAAAAAAA";
@@ -37,6 +37,12 @@ public class PanierResourceIT {
 
     private static final String DEFAULT_LISTE_PRODUIT = "AAAAAAAAAA";
     private static final String UPDATED_LISTE_PRODUIT = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_NOMBRE_PRODUITS = 1;
+    private static final Integer UPDATED_NOMBRE_PRODUITS = 2;
+
+    private static final Double DEFAULT_PRIX_TOTAL = 1D;
+    private static final Double UPDATED_PRIX_TOTAL = 2D;
 
     @Autowired
     private PanierRepository panierRepository;
@@ -78,7 +84,9 @@ public class PanierResourceIT {
     public static Panier createEntity() {
         Panier panier = new Panier()
             .idPanier(DEFAULT_ID_PANIER)
-            .listeProduit(DEFAULT_LISTE_PRODUIT);
+            .listeProduit(DEFAULT_LISTE_PRODUIT)
+            .nombreProduits(DEFAULT_NOMBRE_PRODUITS)
+            .prixTotal(DEFAULT_PRIX_TOTAL);
         return panier;
     }
     /**
@@ -90,7 +98,9 @@ public class PanierResourceIT {
     public static Panier createUpdatedEntity() {
         Panier panier = new Panier()
             .idPanier(UPDATED_ID_PANIER)
-            .listeProduit(UPDATED_LISTE_PRODUIT);
+            .listeProduit(UPDATED_LISTE_PRODUIT)
+            .nombreProduits(UPDATED_NOMBRE_PRODUITS)
+            .prixTotal(UPDATED_PRIX_TOTAL);
         return panier;
     }
 
@@ -116,6 +126,8 @@ public class PanierResourceIT {
         Panier testPanier = panierList.get(panierList.size() - 1);
         assertThat(testPanier.getIdPanier()).isEqualTo(DEFAULT_ID_PANIER);
         assertThat(testPanier.getListeProduit()).isEqualTo(DEFAULT_LISTE_PRODUIT);
+        assertThat(testPanier.getNombreProduits()).isEqualTo(DEFAULT_NOMBRE_PRODUITS);
+        assertThat(testPanier.getPrixTotal()).isEqualTo(DEFAULT_PRIX_TOTAL);
     }
 
     @Test
@@ -148,7 +160,9 @@ public class PanierResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(panier.getId())))
             .andExpect(jsonPath("$.[*].idPanier").value(hasItem(DEFAULT_ID_PANIER)))
-            .andExpect(jsonPath("$.[*].listeProduit").value(hasItem(DEFAULT_LISTE_PRODUIT)));
+            .andExpect(jsonPath("$.[*].listeProduit").value(hasItem(DEFAULT_LISTE_PRODUIT)))
+            .andExpect(jsonPath("$.[*].nombreProduits").value(hasItem(DEFAULT_NOMBRE_PRODUITS)))
+            .andExpect(jsonPath("$.[*].prixTotal").value(hasItem(DEFAULT_PRIX_TOTAL.doubleValue())));
     }
     
     @Test
@@ -162,7 +176,9 @@ public class PanierResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(panier.getId()))
             .andExpect(jsonPath("$.idPanier").value(DEFAULT_ID_PANIER))
-            .andExpect(jsonPath("$.listeProduit").value(DEFAULT_LISTE_PRODUIT));
+            .andExpect(jsonPath("$.listeProduit").value(DEFAULT_LISTE_PRODUIT))
+            .andExpect(jsonPath("$.nombreProduits").value(DEFAULT_NOMBRE_PRODUITS))
+            .andExpect(jsonPath("$.prixTotal").value(DEFAULT_PRIX_TOTAL.doubleValue()));
     }
 
     @Test
@@ -183,7 +199,9 @@ public class PanierResourceIT {
         Panier updatedPanier = panierRepository.findById(panier.getId()).get();
         updatedPanier
             .idPanier(UPDATED_ID_PANIER)
-            .listeProduit(UPDATED_LISTE_PRODUIT);
+            .listeProduit(UPDATED_LISTE_PRODUIT)
+            .nombreProduits(UPDATED_NOMBRE_PRODUITS)
+            .prixTotal(UPDATED_PRIX_TOTAL);
 
         restPanierMockMvc.perform(put("/api/paniers")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -196,6 +214,8 @@ public class PanierResourceIT {
         Panier testPanier = panierList.get(panierList.size() - 1);
         assertThat(testPanier.getIdPanier()).isEqualTo(UPDATED_ID_PANIER);
         assertThat(testPanier.getListeProduit()).isEqualTo(UPDATED_LISTE_PRODUIT);
+        assertThat(testPanier.getNombreProduits()).isEqualTo(UPDATED_NOMBRE_PRODUITS);
+        assertThat(testPanier.getPrixTotal()).isEqualTo(UPDATED_PRIX_TOTAL);
     }
 
     @Test

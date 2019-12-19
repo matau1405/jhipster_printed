@@ -12,8 +12,9 @@ prixProd String,
 dispo Boolean,
 stock Long,
 marque String,
+imageProd String,
 personnalisable Boolean,
-umageProd String
+imagePersonalisation String 
 }
 
 
@@ -46,13 +47,14 @@ entity Expedition{
 
 entity Panier {
 idPanier String,
-listeProduit String
+listeProduit String,
+nombreProduits Integer, 
+prixTotal Double
 }
 
 entity Commande {
 idCmd String,
 dateCmd String,
-montantCmd Float, 
 delaiLivraisonCmd Double,
 etatLivraisonCmd String,
 lieuLivraisonCmd String,
@@ -78,20 +80,7 @@ emailClient String,
 listCommande String
 }
 
-entity ProduitsNoPerso {
-typeProduits String
-}
 
-entity TshirtPerso {
-
-}
-entity Image {
-url String,
-longueurImg Float,
-largeurImg Float,
-poidsImg Long,
-positionImg String
-}
 
 
 

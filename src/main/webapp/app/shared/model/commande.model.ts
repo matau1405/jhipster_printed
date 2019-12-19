@@ -4,7 +4,6 @@ export interface ICommande {
   id?: string;
   idCmd?: string;
   dateCmd?: string;
-  montantCmd?: number;
   delaiLivraisonCmd?: number;
   etatLivraisonCmd?: string;
   lieuLivraisonCmd?: string;
@@ -19,7 +18,6 @@ export class Commande implements ICommande {
     public id?: string,
     public idCmd?: string,
     public dateCmd?: string,
-    public montantCmd?: number,
     public delaiLivraisonCmd?: number,
     public etatLivraisonCmd?: string,
     public lieuLivraisonCmd?: string,

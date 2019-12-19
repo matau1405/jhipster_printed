@@ -10,10 +10,6 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "montantCmd",
-            "fieldType": "Float"
-        },
-        {
             "fieldName": "delaiLivraisonCmd",
             "fieldType": "Double"
         },
@@ -47,7 +43,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20191213132350",
+    "changelogDate": "20191219122009",
     "entityTableName": "commande",
     "dto": "no",
     "pagination": "no",

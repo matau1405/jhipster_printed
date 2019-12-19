@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { PrintedSharedModule } from 'app/shared/shared.module';
+import { JhipsterPrintedSharedModule } from 'app/shared/shared.module';
 import { CommandeComponent } from './commande.component';
 import { CommandeDetailComponent } from './commande-detail.component';
 import { CommandeUpdateComponent } from './commande-update.component';
@@ -11,7 +11,7 @@ import { commandeRoute, commandePopupRoute } from './commande.route';
 const ENTITY_STATES = [...commandeRoute, ...commandePopupRoute];
 
 @NgModule({
-  imports: [PrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
+  imports: [JhipsterPrintedSharedModule, RouterModule.forChild(ENTITY_STATES)],
   declarations: [
     CommandeComponent,
     CommandeDetailComponent,
@@ -21,4 +21,4 @@ const ENTITY_STATES = [...commandeRoute, ...commandePopupRoute];
   ],
   entryComponents: [CommandeDeleteDialogComponent]
 })
-export class PrintedCommandeModule {}
+export class JhipsterPrintedCommandeModule {}

@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { PrintedTestModule } from '../../../test.module';
+import { JhipsterPrintedTestModule } from '../../../test.module';
 import { PanierUpdateComponent } from 'app/entities/panier/panier-update.component';
 import { PanierService } from 'app/entities/panier/panier.service';
 import { Panier } from 'app/shared/model/panier.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [PrintedTestModule],
+        imports: [JhipsterPrintedTestModule],
         declarations: [PanierUpdateComponent],
         providers: [FormBuilder]
       })

@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { PrintedTestModule } from '../../../test.module';
+import { JhipsterPrintedTestModule } from '../../../test.module';
 import { ProduitsUpdateComponent } from 'app/entities/produits/produits-update.component';
 import { ProduitsService } from 'app/entities/produits/produits.service';
 import { Produits } from 'app/shared/model/produits.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [PrintedTestModule],
+        imports: [JhipsterPrintedTestModule],
         declarations: [ProduitsUpdateComponent],
         providers: [FormBuilder]
       })

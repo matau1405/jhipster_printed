@@ -1,6 +1,6 @@
 package fr.inti.printed.security;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.domain.User;
 import fr.inti.printed.repository.UserRepository;
 
@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 /**
  * Integrations tests for {@link DomainUserDetailsService}.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class DomainUserDetailsServiceIT {
 
     private static final String USER_ONE_LOGIN = "test-user-one";

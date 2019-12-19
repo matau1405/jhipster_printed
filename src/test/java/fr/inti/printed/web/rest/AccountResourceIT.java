@@ -1,6 +1,6 @@
 package fr.inti.printed.web.rest;
 
-import fr.inti.printed.PrintedApp;
+import fr.inti.printed.JhipsterPrintedApp;
 import fr.inti.printed.config.Constants;
 import fr.inti.printed.domain.Authority;
 import fr.inti.printed.domain.PersistentToken;
@@ -46,7 +46,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link AccountResource} REST controller.
  */
-@SpringBootTest(classes = PrintedApp.class)
+@SpringBootTest(classes = JhipsterPrintedApp.class)
 public class AccountResourceIT {
 
     @Autowired

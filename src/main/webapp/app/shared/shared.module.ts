@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { PrintedSharedLibsModule } from './shared-libs.module';
+import { JhipsterPrintedSharedLibsModule } from './shared-libs.module';
 import { JhiAlertComponent } from './alert/alert.component';
 import { JhiAlertErrorComponent } from './alert/alert-error.component';
 import { JhiLoginModalComponent } from './login/login.component';
 import { HasAnyAuthorityDirective } from './auth/has-any-authority.directive';
 
 @NgModule({
-  imports: [PrintedSharedLibsModule],
+  imports: [JhipsterPrintedSharedLibsModule],
   declarations: [JhiAlertComponent, JhiAlertErrorComponent, JhiLoginModalComponent, HasAnyAuthorityDirective],
   entryComponents: [JhiLoginModalComponent],
-  exports: [PrintedSharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent, JhiLoginModalComponent, HasAnyAuthorityDirective]
+  exports: [JhipsterPrintedSharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent, JhiLoginModalComponent, HasAnyAuthorityDirective]
 })
-export class PrintedSharedModule {}
+export class JhipsterPrintedSharedModule {}

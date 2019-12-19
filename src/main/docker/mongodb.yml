@@ -1,8 +1,8 @@
 version: '2'
 services:
-  printed-mongodb:
+  jhipster_printed-mongodb:
     image: mongo:4.0.12
     ports:
       - '27017:27017'
     # volumes:
-    #     - ~/volumes/jhipster/Printed/mongodb/:/data/db/
+    #     - ~/volumes/jhipster/jhipster_printed/mongodb/:/data/db/
